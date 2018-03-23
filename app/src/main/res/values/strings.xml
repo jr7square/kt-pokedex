@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KTPokedex</string>
+    <string name="pokemon_details">Pokemon Details</string>
+    <string name="search_btn_label">Search</string>
+</resources>
