@@ -53,16 +53,13 @@ class PokedexAdapter(pk: Array<PokedexEntry>): RecyclerView.Adapter<PokemonViewH
 
         pokemonView?.findViewById<TextView>(R.id.text_pokemon_name)?.text = pokemon.name
         val img = pokemonView?.findViewById<ImageView>(R.id.image_pokemon)
-        img?.setImageResource(R.drawable.bulba)
+        img?.setImageResource(R.drawable.pokeball2)
 
     }
 
     fun search(input: String) {
         pokemonSearchResults = pokemonEntries.filter {
             it.name.contains(input.toLowerCase())
-        }
-        pokemonSearchResults.forEach {
-            Log.d("pokemon", it.name)
         }
         notifyDataSetChanged()
     }

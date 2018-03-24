@@ -2,6 +2,7 @@ package com.recinos.junior.ktpokedex
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 
 class PokemonDetailsActivity : AppCompatActivity() {
@@ -22,9 +23,12 @@ class PokemonDetailsActivity : AppCompatActivity() {
         val textType1 = findViewById<TextView>(R.id.text_type1)
         val textType2 = findViewById<TextView>(R.id.text_type2)
         val textDescription = findViewById<TextView>(R.id.text_description_content)
+        val image = findViewById<ImageView>(R.id.image_pokemon_detail)
 
+        image.setImageResource(R.drawable.pokeball2)
         textName.text = pName
         textDescription.text = pDescription
+
 
         when(pTypes.size) {
             1 -> {
