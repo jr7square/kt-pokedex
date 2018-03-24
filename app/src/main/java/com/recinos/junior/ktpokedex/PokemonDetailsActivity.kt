@@ -15,21 +15,24 @@ class PokemonDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pokemon_details_activty)
 
+        //getting data from intent
         val pName = intent.getStringExtra(POKEMON_NAME)
         val pTypes = intent.getStringArrayExtra(POKEMON_TYPES)
         val pDescription = intent.getStringExtra(POKEMON_DESCRIPTION)
 
+        //getting views from layout
         val textName = findViewById<TextView>(R.id.text_pokemon_name)
         val textType1 = findViewById<TextView>(R.id.text_type1)
         val textType2 = findViewById<TextView>(R.id.text_type2)
         val textDescription = findViewById<TextView>(R.id.text_description_content)
         val image = findViewById<ImageView>(R.id.image_pokemon_detail)
 
+        //binding data passed with Intent with view of this activity
         image.setImageResource(R.drawable.pokeball2)
         textName.text = pName
         textDescription.text = pDescription
 
-
+        //need to handle case when a pokemon only has one type
         when(pTypes.size) {
             1 -> {
                 textType1.text = pTypes[0]

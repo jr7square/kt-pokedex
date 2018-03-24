@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--View to get input text from the user -->
     <EditText
         android:id="@+id/input_search"
         android:layout_width="0dp"
@@ -19,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Button view to trigger search -->
     <Button
         android:id="@+id/btn_search"
         android:layout_width="wrap_content"
@@ -31,6 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Guideline is not visible to user but helps with formatting of screen -->
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -38,6 +41,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="83dp" />
 
+    <!-- List of pokemons -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/pokedex_recycler"
         android:layout_width="0dp"
