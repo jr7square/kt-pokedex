@@ -8,10 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 
-/**
- * Created by Junior on 3/22/2018.
- */
-
 /* *
     The PokedexAdapter class binds the pokemon entries data to the list of views of the recycler view
  */
@@ -59,9 +55,6 @@ class PokedexAdapter(pk: Array<PokedexEntry>): RecyclerView.Adapter<PokemonViewH
             }
             pokemonView.context.startActivity(intent)
         }
-
-
-
     }
 
     //search pokemon entries by matching the input parameter with the pokemon's name
@@ -71,7 +64,6 @@ class PokedexAdapter(pk: Array<PokedexEntry>): RecyclerView.Adapter<PokemonViewH
         }
         notifyDataSetChanged()
     }
-
 }
 
 //require class for recycler view to work properly

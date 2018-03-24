@@ -43,10 +43,9 @@ class MainActivity : AppCompatActivity() {
             val pokedexAdapter = recycler.adapter as PokedexAdapter
             pokedexAdapter.search(input.text.toString())
         }
-
     }
 
-    fun readPokemonEntries(): Array<PokedexEntry> {
+    private fun readPokemonEntries(): Array<PokedexEntry> {
         //reading array of json objects from file
         val inputS = BufferedInputStream(resources.openRawResource(R.raw.pokemon))
         val isReader = InputStreamReader(inputS)
@@ -56,5 +55,4 @@ class MainActivity : AppCompatActivity() {
         val gson = Gson()
         return gson.fromJson<Array<PokedexEntry>>(json, Array<PokedexEntry>::class.java)
     }
-
 }

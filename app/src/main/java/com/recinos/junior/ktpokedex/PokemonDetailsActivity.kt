@@ -36,20 +36,17 @@ class PokemonDetailsActivity : AppCompatActivity() {
         when(pTypes.size) {
             1 -> {
                 textType1.text = pTypes[0]
-                textType2.alpha = 0.0f
+                textType2.alpha = 0.0f //sets label invisible
             }
-
             2 -> {
                 textType1.text = pTypes[0]
                 textType2.text = pTypes[1]
-                textType2.alpha = 1.0f
+                textType2.alpha = 1.0f //sets label visible
             }
             else -> {
-                textType1.alpha = 0.0f
-                textType2.alpha = 0.0f
+                textType1.alpha = 0.0f //sets label invisible
+                textType2.alpha = 0.0f //sets label invisible
             }
-
         }
-
     }
 }
